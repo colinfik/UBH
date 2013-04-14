@@ -17,6 +17,12 @@ public class Driver {
 		System.out.println(p.tax());
 		FiletoExcel fe = new FiletoExcel();
 		fe.excel(p.total(), p.tax());
+		MailReader mail = new MailReader();
+		try {
+			mail.connect();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
